@@ -6,7 +6,10 @@ import { FaEye, FaGithub } from "react-icons/fa";
 
 const Project = () => {
   return (
-    <div className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10" id="project">
+    <div
+      className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10"
+      id="project"
+    >
       <div className="mx-auto max-w-7xl">
         <Parallax speed={10} className="w-full ">
           <div className=" flex flex-col justify-center items-center">
@@ -40,7 +43,7 @@ const Project = () => {
                       <img
                         src={items.image}
                         alt={items.title}
-                        className="md:w-[500px] rounded-md shadow-md h-[300px]"
+                        className="md:w-[500px] rounded-md shadow-lg h-[300px] border-8 border-gray-300"
                       />
                     </div>
                     <div>
@@ -49,8 +52,20 @@ const Project = () => {
                           {items.title}
                         </h2>
                         <div className="px-4 flex gap-3">
-                          <FaGithub className="text-2xl text-purple-700" />
-                          <FaEye className="text-2xl text-gray-700" />
+                          <a
+                            href={items.gitHub === "" ? "#" : `${items.gitHub}`}
+                            rel="noopener noreferrer"
+                          >
+                            <FaGithub className="text-2xl text-purple-700" />
+                          </a>
+                          <a
+                            href={
+                              items.webLink === "" ? "#" : `${items.webLink}`
+                            }
+                            rel="noopener noreferrer"
+                          >
+                            <FaEye className="text-2xl text-gray-700" />
+                          </a>
                         </div>
                       </div>
                       <p className="text-[17px] text-gray-700 leading-7">

@@ -11,10 +11,15 @@ import web from "./web.png";
 import ham_menu from "./png/ham-menu.svg";
 import ham_close from "./png/ham-menu-close.svg";
 import background from "./png/common-bg.svg";
+import logo from "./logo.svg";
 
 import aiSummarizer from "./works/aiSummarizer.png";
 import automation from "./works/automation.png";
 import safeBay from "./works/safeBay.png";
+import swizzfunds from "./works/swizzfunds.png";
+
+import avatar from "./avatar.jpeg";
+import car from "./car.jpeg";
 
 export {
   theImage,
@@ -32,4 +37,6 @@ export {
   aiSummarizer,
   automation,
   safeBay,
+  swizzfunds,
+  avatar, car, logo,
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ham_close, ham_menu } from "../assets";
+import { ham_close, ham_menu, logo } from "../assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +11,8 @@ const Navbar = () => {
   return (
     <nav className="bg-white  md:px-6 w-full py-4 fixed top-0 z-50 flex justify-between md:py-6">
       <div className="relative flex justify-between items-center px-6 w-full">
-        <div className="font-bold uppercase text-xl w-full whitespace-nowrap">
+        <div className="font-bold uppercase text-xl w-full whitespace-nowrap flex gap-2">
+          {/* <img src={logo} alt="logo" className="w-[70px]"/> */}
           <h1>Noble Chinonso</h1>
         </div>
 
@@ -35,31 +35,37 @@ const Navbar = () => {
         </div>
         {isMenuOpen && (
           <div className="flex divide-y-2 flex-col md:hidden bg-white  float-right uppercase text-right w-full divide-gray-100 font-semibold shadow-lg rounded-md py-6 text-gray-600 text-[15px] -tracking-tighter border-t fixed left-0 top-16 ">
-            <a href="/" className="pb-6 px-6">
+            <a href="/" className="pb-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
               Home
             </a>
-            <a href="#about" className="py-6 px-6">
+            <a href="#about" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
               About
             </a>
-            <a href="#project" className="py-6 px-6">
+            <a href="#project" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
             Project
           </a>
-          <a href="#contact" className="py-6 px-6">
+            <a href="#feedbacks" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
+            Feedbacks
+          </a>
+          <a href="#contact" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
             Contact
           </a>
           </div>
         )}
         <div className="uppercase md:flex justify-end gap-12 text-right w-full font-semibold text-gray-600 text-[15px] -tracking-tighter px-6 hidden">
-          <a href="#" className="">
+          <a href="#" className="hover:text-orange-500 duration-150 ease-in-out">
             Home
           </a>
-          <a href="#about" className="">
+          <a href="#about" className=" hover:text-orange-500 duration-150 ease-in-out">
             About
           </a>
-          <a href="#project" className="">
+          <a href="#project" className=" hover:text-orange-500 duration-150 ease-in-out">
             Project
           </a>
-          <a href="#contact" className="">
+          <a href="#feedbacks" className=" hover:text-orange-500 duration-150 ease-in-out">
+          Feedbacks
+          </a>
+          <a href="#contact" className=" hover:text-orange-500 duration-150 ease-in-out">
             Contact
           </a>
         </div>

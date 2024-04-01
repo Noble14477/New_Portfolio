@@ -44,7 +44,7 @@ const Contact = () => {
                 </label>
 
             <div className="mt-4  flex justify-end">
-              <button className="bg-tertiary py-4 px-10 md:px-12 rounded-md text-white uppercase">
+              <button className="bg-tertiary py-4 uppercase text-white px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl">
                 Submit
               </button>
             </div>

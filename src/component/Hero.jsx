@@ -33,21 +33,21 @@ const Hero = () => {
                   leads to the success of the overall product
                 </p>
                 <div className="flex justify-center items-center mt-8">
-                  <Link
-                    to="/projects"
-                    className="bg-tertiary py-4 uppercase text-white px-16 rounded-md"
+                  <a
+                    href="#project"
+                    className="bg-tertiary py-4 uppercase text-white px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl"
                   >
                     Projects
-                  </Link>
+                  </a>
                 </div>
                 <div className="bg-white rounded py-6 px-4 shadow-lg  flex-col gap-8 hidden md:flex text-4xl absolute top-0 left-0">
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/noble-chinonso/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                   </a>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://twitter.com/Noble14188" target="_blank" rel="noopener noreferrer">
                     <FaTwitter />
                   </a>
-                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Noble14477" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                   </a>
                 </div>

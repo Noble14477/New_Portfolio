@@ -4,6 +4,7 @@ import About from "../component/About";
 import Project from "../component/Project";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
+import Feedbacks from "../component/Feedbacks";
 
 const Homepage = () => {
   return (
@@ -14,6 +15,7 @@ const Homepage = () => {
       <div className="">
         <About/>
         <Project/>
+        <Feedbacks/>
         <Contact/>
         <Footer/>
       </div>
