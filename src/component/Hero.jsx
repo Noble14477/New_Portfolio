@@ -1,5 +1,5 @@
 import React from "react";
-import { background } from "../assets";
+import { background, resume } from "../assets";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -32,15 +32,16 @@ const Hero = () => {
                   and Web <br className="hidden md:block" /> Applications that
                   leads to the success of the overall product
                 </p>
-                <div className="flex justify-center items-center mt-8">
+                <div className="flex justify-center items-center mt-8 gap-4">
                   <a
                     href="#project"
-                    className="bg-tertiary py-4 uppercase text-white px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl"
+                    className="bg-tertiary px-6 py-2 md:py-4 uppercase text-white md:px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl"
                   >
                     Projects
                   </a>
+                  <a href={resume} download={"Noble's Resume"} className="border-2 px-6 py-2 border-gray-700 bg-white md:py-4 uppercase text-black md:px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl">Download Cv</a>
                 </div>
-                <div className="bg-white rounded py-6 px-4 shadow-lg  flex-col gap-8 hidden md:flex text-4xl absolute top-0 left-0">
+                <div className="bg-white rounded py-6 px-4 shadow-lg flex-col gap-8 hidden md:flex text-4xl absolute top-0 left-0">
                   <a href="https://www.linkedin.com/in/noble-chinonso/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                   </a>

@@ -18,6 +18,8 @@ import automation from "./works/automation.png";
 import safeBay from "./works/safeBay.png";
 import swizzfunds from "./works/swizzfunds.png";
 
+import resume from "./resume/resume.pdf";
+
 import avatar from "./avatar.jpeg";
 import car from "./car.jpeg";
 
@@ -38,5 +40,8 @@ export {
   automation,
   safeBay,
   swizzfunds,
-  avatar, car, logo,
+  avatar,
+  car,
+  logo,
+  resume,
 };
