@@ -3,7 +3,6 @@ import { background, resume } from "../assets";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
