@@ -1,105 +1,185 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { works } from "../constants";
-import { FaEye, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa";
 
 const Project = () => {
+  const [activeTab, setActiveTab] = useState("web");
+  const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const filteredWorks = works.filter((item) => item.type === activeTab);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
   return (
     <div
-      className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10"
+      className="w-full overflow-hidden bg-gray-50 text-gray-800 py-28 px-4 md:px-8 lg:px-20"
       id="project"
     >
       <div className="mx-auto max-w-7xl">
-        <Parallax speed={10} className="w-full ">
-          <div className=" flex flex-col justify-center items-center">
-            <div>
-              {/* <p className="text-2xl uppercase text-gray-200 text-center">
-            Intoduction
-          </p> */}
-              <div className="relative flex justify-center items-center flex-col mb-4">
-                <h2 className="text-4xl uppercase font-bold py-6">Projects.</h2>
-                <div className="bg-tertiary w-[40px] h-2 rounded-full" />
-              </div>
+        <div className="w-full">
+          <div className="flex flex-col justify-center items-center mb-16">
+            <div className="relative flex justify-center items-center flex-col mb-6">
+              <h2 className="text-5xl font-serif font-medium tracking-wide text-gray-900 py-4">
+                My Work
+              </h2>
+              <div className="bg-gray-900 w-16 h-1 rounded-full" />
             </div>
-            <p className="text-[17px] max-w-3xl leading-[30px] mt-4 text-center">
-              {" "}
-              Following projects showcases my skills and experience through
-              real-world examples of my work. Each project is briefly discribed
-              with links to code repositories and live demos in it. it reflects
-              my ability to solve complex problems, work with diffrent
-              technologies, and manage projects effectively.
+            <p className="text-lg max-w-3xl leading-relaxed text-center text-gray-600">
+              A curated selection of projects demonstrating my expertise in both web development and graphic design.
             </p>
+
+            {/* Tabs */}
+            <div className="flex gap-4 mt-12 border-b border-gray-200 pb-1">
+              {["web", "graphics"].map((type) => (
+                <button
+                  key={type}
+                  onClick={() => setActiveTab(type)}
+                  className={`text-base font-medium px-6 py-2 relative transition-all duration-300 ${
+                    activeTab === type
+                      ? "text-gray-900"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
+                >
+                  {type === "web" ? "Web Projects" : "Graphics Design"}
+                  {activeTab === type && (
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 transition-all duration-300" />
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
-          <div>
-            <div className="grid gap-10">
-              {works &&
-                works.map((items, index) => (
-                  <div
-                    key={index}
-                    className="grid md:grid-cols-2 gap-6 md:gap-20 mt-20"
+
+          {/* Project Cards */}
+          <div className="grid gap-24 mt-8">
+            {filteredWorks.length > 0 ? (
+              filteredWorks.map((items, index) => (
+                <div
+                  key={index}
+                  className={`grid md:grid-cols-2 gap-16 ${items.type === "graphics" ? "items-start" : "items-center"}`}
+                  onMouseEnter={() => setHoveredProject(index)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  <div 
+                    className={`relative overflow-hidden rounded-lg shadow-xl transition-all duration-500 hover:shadow-xl cursor-zoom-in ${
+                      items.type === "graphics" ? "h-[400px]" : "h-[350px]"
+                    }`}
+                    onClick={() => openModal(items.image)}
                   >
-                    <div>
-                      <img
-                        src={items.image}
-                        alt={items.title}
-                        className="md:w-[500px] rounded-md shadow-lg h-[300px] border-8 border-gray-300"
-                      />
-                    </div>
-                    <div>
-                      <div className="flex justify-between">
-                        <h2 className="pb-4 text-2xl  font-bold">
-                          {items.title}
-                        </h2>
-                        <div className="px-4 flex gap-3">
-                          <a
-                            href={items.gitHub === "" ? "#" : `${items.gitHub}`}
-                            rel="noopener noreferrer"
-                          >
-                            <FaGithub className="text-2xl text-purple-700" />
-                          </a>
-                          <a
-                            href={
-                              items.webLink === "" ? "#" : `${items.webLink}`
-                            }
-                            rel="noopener noreferrer"
-                          >
-                            <FaEye className="text-2xl text-gray-700" />
-                          </a>
-                        </div>
-                      </div>
-                      <p className="text-[17px] text-gray-700 leading-7">
+                    <img
+                      src={items.image}
+                      alt={items.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 ${
+                        hoveredProject === index ? "scale-105" : "scale-100"
+                      } ${
+                        items.type === "graphics" ? "object-top" : "object-center"
+                      }`}
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/10 via-black/30 to-transparent opacity-0 transition-opacity duration-300 ${
+                      hoveredProject === index ? "opacity-100" : "opacity-0"
+                    }`} />
+                  </div>
+                  <div className="flex flex-col justify-center h-full">
+                    <div className="mb-4">
+                      <span className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+                        {items.category || "Featured Project"}
+                      </span>
+                      <h2 className="text-3xl font-serif font-medium text-gray-900 mt-1 mb-3">
+                        {items.title}
+                      </h2>
+                      <p className="text-lg leading-relaxed text-gray-600">
                         {items.desc}
                       </p>
-                      <div className="flex gap-2 mt-4 flex-wrap mb-2">
-                        {items.tech.map((tech, index) => (
-                          <p
-                            className={`${tech.color} px-3 text-[14px] rounded-lg -tracking-tighter`}
-                            key={index}
-                          >
-                            #{tech.name}
-                          </p>
-                        ))}
-                      </div>
-                      <p className="mt-6 font-semibold text-[15px] px-3">
-                        Status:{" "}
+                    </div>
+                    
+                    <div className="flex gap-3 mt-4 flex-wrap mb-6">
+                      {items.tech.map((tech, index) => (
                         <span
-                          className={
-                            items.status === "Completed"
-                              ? "text-blue-700 "
-                              : "text-green-700 "
-                          }
+                          className={`text-sm font-medium ${tech.color} px-3 py-1 rounded-full`}
+                          key={index}
                         >
-                          {items.status}
+                          {tech.name}
                         </span>
-                      </p>
+                      ))}
+                    </div>
+                    
+                    <div className="flex gap-4">
+                      {items.gitHub && (
+                        <a
+                          href={items.gitHub}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+                        >
+                          <FaGithub className="text-xl" />
+                          <span>Code</span>
+                        </a>
+                      )}
+                      {items.webLink && (
+                        <a
+                          href={items.webLink}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+                        >
+                          <FaExternalLinkAlt className="text-lg" />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+                    </div>
+                    
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                      <span className={`text-sm font-medium ${
+                        items.status === "Completed"
+                          ? "text-green-600"
+                          : "text-blue-600"
+                      }`}
+                      >
+                        {items.status}
+                      </span>
                     </div>
                   </div>
-                ))}
-            </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-center text-gray-500 mt-10">
+                No projects found for this category.
+              </p>
+            )}
           </div>
-        </Parallax>
+        </div>
       </div>
+
+      {/* Image Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
+          <div className="relative max-w-6xl max-h-[90vh]">
+            <button
+              onClick={closeModal}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close modal"
+            >
+              <FaTimes className="text-2xl" />
+            </button>
+            <img
+              src={selectedImage}
+              alt="Enlarged project preview"
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

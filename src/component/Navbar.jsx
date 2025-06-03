@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { ham_close, ham_menu, logo } from "../assets";
+import { useState } from "react";
+import { ham_close, ham_menu, logoIcon } from "../assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +11,9 @@ const Navbar = () => {
   return (
     <nav className="bg-white  md:px-6 w-full py-4 fixed top-0 z-50 flex justify-between md:py-6">
       <div className="relative flex justify-between items-center px-6 w-full">
-        <div className="font-bold uppercase text-xl w-full whitespace-nowrap flex gap-2">
-          {/* <img src={logo} alt="logo" className="w-[70px]"/> */}
-          <h1>Noble Chinonso</h1>
+        <div className="font-bold capitalize text-xl w-full whitespace-nowrap flex gap-2 items-center">
+          <img src={logoIcon} alt="logo" className="w-[50px]"/>
+          <h1>NobleDevWorks</h1>
         </div>
 
         <div className="relative">

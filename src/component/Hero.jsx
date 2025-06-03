@@ -14,8 +14,8 @@ const Hero = () => {
           children: (
             <div className="absolute inset-0 flex text-black items-center justify-center flex-col">
               <div className="w-full h-full absolute bg-gray-100 opacity-80" />
-              <div className="relative px-4 w-full">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase font-bold py-4 text-center">
+              <div className="relative px-4 w-full ">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase font-bold  py-4 text-center">
                   Hey, I'm{" "}
                   <ReactTyped
                     strings={["Noble Chinonso"]}

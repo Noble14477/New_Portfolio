@@ -16,7 +16,7 @@ const Feedbacks = () => {
                 Intoduction
               </p> */}
               <div className="relative flex justify-center items-center flex-col mb-4">
-                <h2 className="text-4xl uppercase font-bold py-6">
+                <h2 className="text-4xl capitalize font-bold py-6 font-serif">
                   Feedbacks.
                 </h2>
                 <div className="bg-tertiary w-[40px] h-2 rounded-full" />

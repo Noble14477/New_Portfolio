@@ -7,16 +7,20 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
+import logoIcon from "./logoIcon.png";
 
 import ham_menu from "./png/ham-menu.svg";
 import ham_close from "./png/ham-menu-close.svg";
 import background from "./png/common-bg.svg";
 import logo from "./logo.svg";
 
+import hotel from "./works/hotel.png";
 import aiSummarizer from "./works/aiSummarizer.png";
 import automation from "./works/automation.png";
 import safeBay from "./works/safeBay.png";
-import swizzfunds from "./works/swizzfunds.png";
+import swizzfunds from "./works/swizzfund.png";
+import NobleDevWorks from "./works/NobleDevWorks.jpg";
+import NobleDevWorks2 from "./works/NobleDevWorks2.jpg";
 
 import resume from "./resume/resume.pdf";
 
@@ -24,6 +28,7 @@ import avatar from "./avatar.jpeg";
 import car from "./car.jpeg";
 
 export {
+  logoIcon,
   theImage,
   image1,
   image2,
@@ -36,10 +41,13 @@ export {
   ham_menu,
   ham_close,
   background,
+  hotel,
   aiSummarizer,
   automation,
   safeBay,
   swizzfunds,
+  NobleDevWorks2,
+  NobleDevWorks,
   avatar,
   car,
   logo,
