@@ -10,6 +10,7 @@ import {
   hotel,
   NobleDevWorks,
   NobleDevWorks2,
+  invoice,
 } from "../assets";
 
 const services = [
@@ -105,6 +106,34 @@ const works = [
     },
   ]
   },
+  {
+    title: "Invoice Generator App",
+    type: "web",
+    desc: "This web application allows users to create, manage, and view invoices with ease. It features secure authentication using Firebase, real-time data handling with Firestore, and a user-friendly interface built with React and Tailwind CSS. Users can log in, generate invoices, and track their billing history. A demo account is also provided for quick testing.",
+    image: invoice,
+    status: "Completed",
+    webLink: "https://newinvoiceapp.netlify.app/invoice", 
+    gitHub: "https://github.com/Noble14477/Invoice_app", 
+    tech: [
+      {
+        name: "ReactJs",
+        color: "text-blue-800"
+      },
+      {
+        name: "Tailwind CSS",
+        color: "text-blue-500"
+      },
+      {
+        name: "Firebase",
+        color: "text-yellow-500"
+      },
+      {
+        name: "Firestore",
+        color: "text-orange-700"
+      }
+    ],
+  }
+  ,
   {
     title: "Social Media Automation",
     type: "web",

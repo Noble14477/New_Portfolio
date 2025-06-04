@@ -24,37 +24,37 @@ const Project = () => {
 
   return (
     <div
-      className="w-full overflow-hidden bg-gray-50 text-gray-800 py-28 px-4 md:px-8 lg:px-20"
+      className="w-full overflow-hidden bg-gray-50 text-gray-800 py-28 px-4 md:px-8 lg:px-20 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white"
       id="project"
     >
       <div className="mx-auto max-w-7xl">
         <div className="w-full">
           <div className="flex flex-col justify-center items-center mb-16">
             <div className="relative flex justify-center items-center flex-col mb-6">
-              <h2 className="text-5xl font-serif font-medium tracking-wide text-gray-900 py-4">
+              <h2 className="text-5xl font-serif font-medium tracking-wide text-gray-900 dark:text-white py-4">
                 My Work
               </h2>
               <div className="bg-gray-900 w-16 h-1 rounded-full" />
             </div>
-            <p className="text-lg max-w-3xl leading-relaxed text-center text-gray-600">
+            <p className="text-lg max-w-3xl leading-relaxed text-center text-gray-600 dark:text-white">
               A curated selection of projects demonstrating my expertise in both web development and graphic design.
             </p>
 
             {/* Tabs */}
-            <div className="flex gap-4 mt-12 border-b border-gray-200 pb-1">
+            <div className="flex gap-4 mt-20 border-b border-gray-500 pb-0">
               {["web", "graphics"].map((type) => (
                 <button
                   key={type}
                   onClick={() => setActiveTab(type)}
-                  className={`text-base font-medium px-6 py-2 relative transition-all duration-300 ${
+                  className={`text-[18px] font-medium px-6 py-2 relative transition-all duration-300 ${
                     activeTab === type
-                      ? "text-gray-900"
-                      : "text-gray-500 hover:text-gray-700"
+                      ? "text-gray-900 dark:text-white"
+                      : "text-gray-500 dark:text-gray-400 hover:text-gray-700"
                   }`}
                 >
                   {type === "web" ? "Web Projects" : "Graphics Design"}
                   {activeTab === type && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 transition-all duration-300" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 dark:bg-tertiary transition-all duration-300" />
                   )}
                 </button>
               ))}
@@ -92,13 +92,13 @@ const Project = () => {
                   </div>
                   <div className="flex flex-col justify-center h-full">
                     <div className="mb-4">
-                      <span className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+                      <span className="text-sm font-medium text-gray-500 dark:text-tertiary uppercase tracking-wider">
                         {items.category || "Featured Project"}
                       </span>
-                      <h2 className="text-3xl font-serif font-medium text-gray-900 mt-1 mb-3">
+                      <h2 className="text-3xl font-serif font-medium text-gray-900 dark:text-white mt-1 mb-3">
                         {items.title}
                       </h2>
-                      <p className="text-lg leading-relaxed text-gray-600">
+                      <p className="text-lg leading-relaxed text-gray-600 dark:text-white">
                         {items.desc}
                       </p>
                     </div>
@@ -106,7 +106,7 @@ const Project = () => {
                     <div className="flex gap-3 mt-4 flex-wrap mb-6">
                       {items.tech.map((tech, index) => (
                         <span
-                          className={`text-sm font-medium ${tech.color} px-3 py-1 rounded-full`}
+                          className={`text-sm font-medium ${tech.color} dark:text-white dark:border-2 dark:border-tertiary px-3 py-1 rounded-full`}
                           key={index}
                         >
                           {tech.name}
@@ -120,7 +120,7 @@ const Project = () => {
                           href={items.gitHub}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+                          className="flex items-center gap-2 text-gray-700 dark:text-white hover:text-gray-900 transition-colors"
                         >
                           <FaGithub className="text-xl" />
                           <span>Code</span>
@@ -131,7 +131,7 @@ const Project = () => {
                           href={items.webLink}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+                          className="flex items-center gap-2 text-gray-700 dark:text-white hover:text-gray-900 transition-colors"
                         >
                           <FaExternalLinkAlt className="text-lg" />
                           <span>Live Demo</span>
@@ -142,8 +142,8 @@ const Project = () => {
                     <div className="mt-6 pt-6 border-t border-gray-200">
                       <span className={`text-sm font-medium ${
                         items.status === "Completed"
-                          ? "text-green-600"
-                          : "text-blue-600"
+                          ? "text-green-600 dark:text-white dark:border-2 dark:border-green-600 p-2 rounded-full"
+                          : "text-blue-600 dark:text-white dark:border-2 dark:border-blue-600 p-2 rounded-full"
                       }`}
                       >
                         {items.status}

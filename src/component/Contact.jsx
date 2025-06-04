@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10" id="contact">
+    <div className="w-full overflow-hidden text-black py-20 px-4 md:px-20  dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white" id="contact">
       <div className="mx-auto max-w-7xl">
         <Parallax speed={10} className="w-full">
           <div className="flex flex-col justify-center items-center">
@@ -46,7 +46,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <form ref={form} onSubmit={sendEmail} className="mt-20 bg-white rounded-lg p-6 md:p-10 max-w-3xl mx-auto">
+          <form ref={form} onSubmit={sendEmail} className="mt-20 bg-white dark:bg-gray-700 rounded-lg p-6 md:p-10 max-w-3xl mx-auto">
             <div className="grid gap-8">
               <label htmlFor="name" className="grid gap-4">Name:
                 <input id="name" type="text" name="user_name" required placeholder="Enter your name..." className="bg-gray-100 md:p-6 p-4 text-[14px] rounded-md" />
