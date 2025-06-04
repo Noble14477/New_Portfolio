@@ -11,6 +11,12 @@ import {
   NobleDevWorks,
   NobleDevWorks2,
   invoice,
+  cssgridFlex,
+  hooks,
+  color,
+  building,
+  debugging,
+  darkMode,
 } from "../assets";
 
 const services = [
@@ -284,4 +290,372 @@ const skills = [
   },
 ];
 
-export { services, skills, works };
+const blogPosts = [
+  {
+    id: 1,
+    title: "Mastering React Hooks: A Comprehensive Guide",
+    excerpt: "Learn how to leverage React Hooks to simplify your components and manage state effectively.",
+    image: hooks,
+    date: "May 15, 2023",
+    readTime: "8 min",
+    categories: ["React", "Frontend"],
+    slug: "mastering-react-hooks",
+    content: `
+# Mastering React Hooks: A Comprehensive Guide
+
+React Hooks revolutionized how we write components by allowing us to use state and other React features without writing classes. In this guide, we'll explore the most important hooks and how to use them effectively.
+
+## The Essential Hooks
+
+### useState
+The \`useState\` hook is your gateway to state management in functional components:
+
+\`\`\`jsx
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+\`\`\`
+
+### useEffect
+For side effects in your components, \`useEffect\` is your go-to hook:
+
+\`\`\`jsx
+useEffect(() => {
+  document.title = \`You clicked \${count} times\`;
+}, [count]); // Only re-run if count changes
+\`\`\`
+
+## Advanced Hook Patterns
+
+### Custom Hooks
+You can build your own hooks to share stateful logic:
+
+\`\`\`jsx
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return width;
+}
+\`\`\`
+
+## Performance Considerations
+
+- Use \`useMemo\` for expensive calculations
+- Use \`useCallback\` to prevent unnecessary re-renders
+- Split effects into multiple \`useEffect\` calls by concern
+
+By mastering these hooks, you'll write cleaner, more maintainable React code.
+`
+  },
+  {
+    id: 2,
+    title: "The Psychology of Color in Web Design",
+    excerpt: "How color choices impact user experience and conversion rates in modern web applications.",
+    image: color,
+    date: "April 28, 2023",
+    readTime: "6 min",
+    categories: ["Design", "UI/UX"],
+    slug: "color-psychology-web-design",
+    content: `
+# The Psychology of Color in Web Design
+
+Color is one of the most powerful tools in a designer's toolkit, influencing mood, perception, and even conversion rates.
+
+## Color Meanings in Different Cultures
+
+| Color  | Western Meaning | Eastern Meaning |
+|--------|-----------------|-----------------|
+| Red    | Danger, Love    | Luck, Prosperity|
+| White  | Purity          | Mourning        |
+| Blue   | Trust           | Immortality     |
+
+## Practical Applications
+
+### Call-to-Action Buttons
+- Red: Creates urgency (great for "Sale" buttons)
+- Green: Associated with positive action ("Go", "Submit")
+- Blue: Builds trust (ideal for "Learn More")
+
+### Background Colors
+- Light backgrounds improve readability
+- Dark backgrounds suggest luxury
+- Gradients create modern, dynamic feels
+
+## Tools for Color Selection
+
+1. **Adobe Color** - Create harmonious color schemes
+2. **Coolors** - Generate quick palettes
+3. **ColorBox** - Build accessible color systems
+
+> "Colors, like features, follow the changes of the emotions." - Pablo Picasso
+
+Remember to test your color choices with real users to ensure they convey the right message.
+`
+  },
+  {
+    id: 3,
+    title: "Building Accessible Web Applications",
+    excerpt: "Practical techniques to ensure your web apps are usable by everyone, regardless of ability.",
+    image: building,
+    date: "April 10, 2023",
+    readTime: "10 min",
+    categories: ["Accessibility", "Frontend"],
+    slug: "building-accessible-web-apps",
+    content: `
+# Building Accessible Web Applications
+
+Web accessibility isn't just a legal requirement—it's a moral obligation that makes your products usable by everyone.
+
+## Core Principles (POUR)
+
+1. **Perceivable**: Available to the senses
+2. **Operable**: Users can interact with all components
+3. **Understandable**: Content and operation are clear
+4. **Robust**: Works across browsers and devices
+
+## Essential Techniques
+
+### Semantic HTML
+Always use the right element for the job:
+
+\`\`\`html
+<!-- Bad -->
+<div onclick="submitForm()">Submit</div>
+
+<!-- Good -->
+<button type="submit">Submit</button>
+\`\`\`
+
+### ARIA Attributes
+When native HTML isn't enough:
+
+\`\`\`html
+<div 
+  role="alert"
+  aria-live="assertive"
+>
+  Your changes have been saved
+</div>
+\`\`\`
+
+## Testing Accessibility
+
+1. **Keyboard Navigation**: Try using your site with just Tab/Enter
+2. **Screen Readers**: Test with NVDA (Windows) or VoiceOver (Mac)
+3. **Automated Tools**: axe DevTools or Lighthouse
+
+Accessibility should be considered from the start of every project, not bolted on at the end.
+`
+  },
+  {
+    id: 4,
+    title: "CSS Grid vs Flexbox: When to Use Each",
+    excerpt: "A detailed comparison of CSS layout systems with practical examples for different use cases.",
+    image: cssgridFlex,
+    date: "March 22, 2023",
+    readTime: "7 min",
+    categories: ["CSS", "Frontend"],
+    slug: "css-grid-vs-flexbox",
+    content: `
+# CSS Grid vs Flexbox: When to Use Each
+
+Both CSS Grid and Flexbox are powerful layout tools, but they serve different purposes.
+
+## The Key Differences
+
+| Feature        | CSS Grid          | Flexbox           |
+|---------------|-------------------|-------------------|
+| Dimensionality | 2D (rows & columns) | 1D (row OR column) |
+| Control       | Explicit placement | Content flow      |
+| Use Case      | Overall page layout | Component layout  |
+
+## When to Use Grid
+
+### Perfect for:
+- Complex page layouts
+- Items that need precise positioning
+- Both rows and columns need control
+
+\`\`\`css
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
+\`\`\`
+
+## When to Use Flexbox
+
+### Ideal for:
+- Navigation bars
+- Centering elements
+- Distributing space within a component
+
+\`\`\`css
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+\`\`\`
+
+## Pro Tip: Use Them Together!
+\`\`\`css
+.page {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+\`\`\`
+`
+  },
+  {
+    id: 5,
+    title: "Effective Debugging Techniques in JavaScript",
+    excerpt: "Professional debugging strategies that will save you hours of frustration in your JS projects.",
+    image: debugging,
+    date: "March 5, 2023",
+    readTime: "9 min",
+    categories: ["JavaScript", "Debugging"],
+    slug: "effective-js-debugging",
+    content: `
+# Effective Debugging Techniques in JavaScript
+
+Debugging is an essential skill that separates junior developers from seniors. Here's how to do it effectively.
+
+## The Debugging Mindset
+
+1. **Reproduce the Issue**: Can you consistently make it happen?
+2. **Isolate the Problem**: Narrow down where it occurs
+3. **Understand Why**: Don't just fix symptoms
+
+## Powerful Tools
+
+### Console Methods Beyond \`console.log\`
+
+\`\`\`js
+// Table for objects/arrays
+console.table(users);
+
+// Group related logs
+console.group('User Details');
+console.log('Name:', user.name);
+console.log('Email:', user.email);
+console.groupEnd();
+
+// Trace call stack
+console.trace('How did we get here?');
+\`\`\`
+
+## Chrome DevTools Tricks
+
+1. **Conditional Breakpoints**: Right-click → Add conditional breakpoint
+2. **XHR Breakpoints**: Pause when specific API calls happen
+3. **Event Listener Breakpoints**: Debug specific interactions
+
+## Common JavaScript Pitfalls
+
+- **Async/Await Issues**: Remember to \`await\` promises
+- **Scope Problems**: Watch for \`this\` binding
+- **Type Coercion**: Use \`===\` instead of \`==\`
+
+> "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements." - Brian Kernighan
+`
+  },
+  {
+    id: 6,
+    title: "The Complete Guide to Dark Mode Implementation",
+    excerpt: "Step-by-step guide to implementing a perfect dark mode that respects user preferences.",
+    image: darkMode,
+    date: "February 18, 2023",
+    readTime: "12 min",
+    categories: ["CSS", "UI/UX"],
+    slug: "dark-mode-implementation-guide",
+    content: `
+# The Complete Guide to Dark Mode Implementation
+
+Dark mode has become an expected feature in modern web applications. Here's how to implement it properly.
+
+## CSS Custom Properties Approach
+
+### 1. Define Your Color Scheme
+\`\`\`css
+:root {
+  --text-primary: #222;
+  --bg-primary: #fff;
+  /* ...other light mode vars */
+}
+
+[data-theme="dark"] {
+  --text-primary: #eee;
+  --bg-primary: #121212;
+  /* ...dark mode overrides */
+}
+\`\`\`
+
+### 2. Create a Theme Toggle
+\`\`\`js
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+}
+\`\`\`
+
+## Respecting System Preferences
+
+\`\`\`css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #eee;
+    --bg-primary: #121212;
+  }
+}
+\`\`\`
+
+## Best Practices
+
+1. **Test Contrast Ratios**: Aim for at least 4.5:1 for normal text
+2. **Adjust Images**: Consider darker variants for dark mode
+3. **Transition Smoothly**:
+   \`\`\`css
+   * {
+     transition: background-color 0.3s, color 0.3s;
+   }
+   \`\`\`
+
+## Accessibility Considerations
+
+- Always provide a manual toggle
+- Don't rely solely on color to convey information
+- Test with various vision deficiencies
+
+Dark mode done right enhances user experience and reduces eye strain.
+`
+  }
+];
+
+
+export { services, skills, works, blogPosts};

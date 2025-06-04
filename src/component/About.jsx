@@ -1,9 +1,7 @@
-// import React from "react";
-// import { image2 } from "../assets";
+import React from "react";
 import { skills } from "../constants";
 import { Parallax } from "react-scroll-parallax";
-// import { Tilt } from "react-tilt";
-// import { Link } from "react-router-dom";
+import { me } from "../assets"; // Make sure to import your image
 
 const About = () => {
   return (
@@ -13,7 +11,7 @@ const About = () => {
       id="about"
     >
       <div className="mx-auto max-w-7xl">
-        <Parallax speed={10} className="w-full ">
+        <Parallax speed={10} className="w-full">
           <div className="flex flex-col justify-center items-center">
             <div className="relative flex justify-center items-center flex-col mb-4">
               <h2 className="text-4xl capitalize font-serif font-bold py-6">About Me.</h2>
@@ -25,7 +23,23 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-20 md:gap-20 mt-20">
-            <div>
+            {/* Left Column - Profile Picture and About Text */}
+            <div className="flex flex-col">
+              {/* Profile Picture Section */}
+              <div className="flex justify-center mb-8 md:hidden">
+                <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-tertiary shadow-xl">
+                  <img 
+                    src={me} 
+                    alt="Noble Chinonso" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span className="text-white font-medium">Noble Chinonso</span>
+                  </div>
+                </div>
+              </div>
+
               <h3 className="pb-8 text-2xl font-bold font-serif">Get To Know Me!</h3>
 
               <div>
@@ -43,8 +57,24 @@ const About = () => {
                   project planning, and working with tools like{" "}
                   <b>Firebase, MongoDB, Cloudinary</b>, and animation libraries
                   such as <b>Framer Motion</b>.
-                  <br />
-                  <br />
+                </p>
+
+                {/* Profile Picture for Desktop - Floating to the right of text */}
+                <div className="hidden md:flex float-right ml-6 mb-4 mt-2">
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-tertiary shadow-xl transform hover:scale-105 transition-transform duration-300">
+                    <img 
+                      src={me} 
+                      alt="Noble Chinonso" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                      <span className="text-white font-medium">NobleDevWorks</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-[16px] text-gray-900 dark:text-white leading-7">
                   Through my brand, <b>NobleDevWorks</b>, I provide:
                   <ul className="list-disc ml-6 mt-2">
                     <li>🔧 Web & graphic design services</li>
@@ -57,7 +87,7 @@ const About = () => {
                     href="https://www.linkedin.com/in/noble-chinonso/"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-tertiary font-bold"
+                    className="text-tertiary font-bold hover:underline"
                   >
                     LinkedIn
                   </a>{" "}
@@ -66,7 +96,7 @@ const About = () => {
                     href="https://twitter.com/Noble14188"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-tertiary font-semibold"
+                    className="text-tertiary font-semibold hover:underline"
                   >
                     Twitter
                   </a>{" "}
@@ -82,7 +112,7 @@ const About = () => {
                 <div className="mt-12 flex justify-start items-start">
                   <a
                     href="#contact"
-                    className="bg-tertiary py-4 uppercase text-white px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl"
+                    className="bg-tertiary py-4 uppercase text-white px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl hover:shadow-2xl transition-all"
                   >
                     Contact
                   </a>
@@ -90,14 +120,17 @@ const About = () => {
               </div>
             </div>
 
+            {/* Right Column - Skills */}
             <div>
+              {/* Profile Picture for Mobile - Already shown above in left column */}
+              
               <h3 className="pb-8 text-2xl font-bold font-serif">My Skills</h3>
 
               <div className="flex gap-4 flex-wrap">
                 {skills.map((items, index) => (
                   <span
                     key={index}
-                    className="bg-gray-200 p-3 text-[14px] rounded-lg -tracking-tighter text-tertiary"
+                    className="bg-gray-200 dark:bg-gray-700 p-3 text-[14px] rounded-lg -tracking-tighter text-tertiary dark:text-tertiary-light hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
                   >
                     {items.title}
                   </span>
