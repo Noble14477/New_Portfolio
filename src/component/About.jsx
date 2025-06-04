@@ -8,7 +8,8 @@ import { Parallax } from "react-scroll-parallax";
 const About = () => {
   return (
     <div
-      className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10"
+      className="w-full overflow-hidden text-black py-20 px-4 md:px-20 bg-gradient-to-br from-white to-gray-100
+      dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white"
       id="about"
     >
       <div className="mx-auto max-w-7xl">
@@ -28,7 +29,7 @@ const About = () => {
               <h3 className="pb-8 text-2xl font-bold font-serif">Get To Know Me!</h3>
 
               <div>
-                <p className="text-[16px] text-gray-900 leading-7">
+                <p className="text-[16px] text-gray-900 dark:text-white leading-7">
                   I'm a <b>multi-skilled creative professional</b> specializing in{" "}
                   <b>web development</b>, <b>graphic design</b>, and{" "}
                   <b>tech training</b>. I build modern, user-friendly websites

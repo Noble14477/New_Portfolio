@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ham_close, ham_menu, logoIcon } from "../assets";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white  md:px-6 w-full py-4 fixed top-0 z-50 flex justify-between md:py-6">
+    <nav className="bg-white dark:bg-slate-900 dark:text-white  md:px-6 w-full py-4 fixed top-0 z-50 flex justify-between md:py-6">
       <div className="relative flex justify-between items-center px-6 w-full">
         <div className="font-bold capitalize text-xl w-full whitespace-nowrap flex gap-2 items-center">
           <img src={logoIcon} alt="logo" className="w-[50px]"/>
@@ -34,7 +35,7 @@ const Navbar = () => {
           )}
         </div>
         {isMenuOpen && (
-          <div className="flex divide-y-2 flex-col md:hidden bg-white  float-right uppercase text-right w-full divide-gray-100 font-semibold shadow-lg rounded-md py-6 text-gray-600 text-[15px] -tracking-tighter border-t fixed left-0 top-16 ">
+          <div className="flex divide-y-2 flex-col md:hidden bg-white dark:bg-slate-900 dark:text-white  float-right uppercase text-right w-full divide-gray-100 font-semibold shadow-lg rounded-md py-6 text-gray-600 text-[15px] -tracking-tighter border-t fixed left-0 top-16 ">
             <a href="/" className="pb-6 px-6 hover:text-orange-500 duration-150 ease-in-out" onClick={handleMenuOpen}>
               Home
             </a>
@@ -52,7 +53,7 @@ const Navbar = () => {
           </a>
           </div>
         )}
-        <div className="uppercase md:flex justify-end gap-12 text-right w-full font-semibold text-gray-600 text-[15px] -tracking-tighter px-6 hidden">
+        <div className="uppercase md:flex justify-end gap-12 text-right w-full font-semibold dark:bg-slate-900 dark:text-white text-gray-600 text-[15px] -tracking-tighter px-6 hidden">
           <a href="#" className="hover:text-orange-500 duration-150 ease-in-out">
             Home
           </a>
@@ -70,6 +71,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      <ThemeToggle />
     </nav>
   );
 };

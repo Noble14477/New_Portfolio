@@ -5,7 +5,7 @@ import { avatar, car, image2 } from "../assets";
 const Feedbacks = () => {
   return (
     <div
-      className="w-full overflow-hidden text-black py-20 px-4 md:px-20 mt-10"
+      className="w-full overflow-hidden text-black py-20 px-4 md:px-20  dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-950 dark:text-white"
       id="feedbacks"
     >
       <div className="mx-auto max-w-7xl">

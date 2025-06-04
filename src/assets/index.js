@@ -21,6 +21,7 @@ import safeBay from "./works/safeBay.png";
 import swizzfunds from "./works/swizzfund.png";
 import NobleDevWorks from "./works/NobleDevWorks.jpg";
 import NobleDevWorks2 from "./works/NobleDevWorks2.jpg";
+import invoice from "./works/invoice.png";
 
 import resume from "./resume/resume.pdf";
 
@@ -48,6 +49,7 @@ export {
   swizzfunds,
   NobleDevWorks2,
   NobleDevWorks,
+  invoice,
   avatar,
   car,
   logo,
