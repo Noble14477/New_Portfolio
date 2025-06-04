@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import Hero from "../component/Hero";
 import About from "../component/About";
@@ -6,6 +7,7 @@ import Contact from "../component/Contact";
 import Footer from "../component/Footer";
 import Feedbacks from "../component/Feedbacks";
 import { logoIcon } from "../assets";
+import Navbar from "../component/Navbar";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +30,7 @@ const Homepage = () => {
 
   return (
     <div>
+      <Navbar />
       {isLoading ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-50 ">
           <div className="flex flex-col items-center">

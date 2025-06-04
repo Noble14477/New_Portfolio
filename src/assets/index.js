@@ -9,6 +9,8 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 import logoIcon from "./logoIcon.png";
 
+import me from "./me.jpg";
+
 import ham_menu from "./png/ham-menu.svg";
 import ham_close from "./png/ham-menu-close.svg";
 import background from "./png/common-bg.svg";
@@ -23,12 +25,26 @@ import NobleDevWorks from "./works/NobleDevWorks.jpg";
 import NobleDevWorks2 from "./works/NobleDevWorks2.jpg";
 import invoice from "./works/invoice.png";
 
+import cssgridFlex from "./blog/css.jpg";
+import darkMode from "./blog/darkMode.jpg";
+import color from "./blog/color.png";
+import building from "./blog/building.webp";
+import debugging from "./blog/debugging.webp";
+import hooks from "./blog/hooks.png";
+
 import resume from "./resume/resume.pdf";
 
 import avatar from "./avatar.jpeg";
 import car from "./car.jpeg";
 
 export {
+  darkMode,
+  debugging,
+  color,
+  building,
+  hooks,
+  cssgridFlex,
+  me,
   logoIcon,
   theImage,
   image1,
