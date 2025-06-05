@@ -20,14 +20,15 @@ const Navbar = () => {
 
         <div className="relative ">
           {!isMenuOpen ? (
-            <div className="flex gap-2 md:hidden">
+            <div className="flex gap-2 md:hidden justify-between items-center w-fit">
               <img
                 src={ham_menu}
                 alt="menu"
                 className="w-[40px] cursor-pointer  bg-white rounded p-1"
                 onClick={handleMenuOpen}
               />
-              <ThemeToggle />
+                <ThemeToggle />
+              
             </div>
           ) : (
             <img
@@ -75,7 +76,7 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out">Blog</Link>
           </div>
         )}
         <div className="uppercase md:flex justify-end gap-12 text-right mr-12 w-full font-semibold dark:bg-slate-900 dark:text-white text-gray-600 text-[14px] -tracking-tighter px-6 hidden">
@@ -109,9 +110,12 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog" className=" hover:text-orange-500 duration-150 ease-in-out">Blog</Link>
         </div>
+        <div className="hidden md:flex ">
+
         <ThemeToggle />
+        </div>
       </div>
     </nav>
   );
