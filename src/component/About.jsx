@@ -130,7 +130,7 @@ const About = () => {
                 {skills.map((items, index) => (
                   <span
                     key={index}
-                    className="bg-gray-200 dark:bg-gray-700 p-3 text-[14px] rounded-lg -tracking-tighter text-tertiary dark:text-tertiary-light hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                    className="bg-gray-200 dark:text-gray-700 dark:bg-white p-3 text-[14px] rounded-lg -tracking-tighter text-tertiary dark:text-tertiary-light hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
                   >
                     {items.title}
                   </span>
