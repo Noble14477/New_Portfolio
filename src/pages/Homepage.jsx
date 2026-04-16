@@ -16,7 +16,7 @@ const Homepage = () => {
   useEffect(() => {
     // Show text after a short delay
     const textTimer = setTimeout(() => setShowText(true), 1000);
-    
+
     // Simulate loading time
     const loadTimer = setTimeout(() => {
       setIsLoading(false);
@@ -39,38 +39,40 @@ const Homepage = () => {
               <div className="relative w-24 h-24 flex items-center justify-center mx-auto max-w-10">
                 {/* Pulsing circle background */}
                 <div className="absolute inset-0 rounded-full bg-gray-200 animate-pulse"></div>
-                
+
                 {/* Rotating border */}
                 <div className="absolute w-full h-full border-4 border-transparent border-t-gray-900 rounded-full animate-spin"></div>
-                
+
                 {/* Logo with fade-in animation */}
-                <img 
-                  src={logoIcon} 
-                  alt="logo" 
+                <img
+                  src={logoIcon}
+                  alt="logo"
                   className="w-12 h-12 transition-all duration-1000 animate-bounce"
-                  style={{ animationDelay: '0.2s' }}
+                  style={{ animationDelay: "0.2s" }}
                 />
               </div>
-              
+
               {/* Text animation */}
               <div className={`mt-6 overflow-hidden`}>
-                <h1 
-                  className={`text-2xl font-bold text-gray-900 transition-all duration-1000 transform ${showText ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+                <h1
+                  className={`text-2xl font-bold text-gray-900 transition-all duration-1000 transform ${showText ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
                 >
                   NobleDevWorks
                 </h1>
-                <div className={`h-1 bg-gray-900 mt-2 transition-all duration-700 ${showText ? 'scale-x-100' : 'scale-x-0'} origin-left`}></div>
+                <div
+                  className={`h-1 bg-gray-900 mt-2 transition-all duration-700 ${showText ? "scale-x-100" : "scale-x-0"} origin-left`}
+                ></div>
               </div>
-              
+
               {/* Loading dots animation */}
               <div className="flex justify-center mt-4 space-x-1">
                 {[0, 1, 2].map((i) => (
-                  <div 
+                  <div
                     key={i}
                     className="w-2 h-2 bg-gray-900 rounded-full animate-bounce"
-                    style={{ 
+                    style={{
                       animationDelay: `${i * 0.2}s`,
-                      animationDuration: '1.5s'
+                      animationDuration: "1.5s",
                     }}
                   />
                 ))}

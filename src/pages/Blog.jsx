@@ -12,7 +12,6 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
-
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -30,9 +29,12 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 ">
       <div className="py-4 px-6 flex justify-between border-b">
-        <Link to="/" className="font-bold capitalize text-xl w-full whitespace-nowrap flex gap-2 items-center ">
+        <Link
+          to="/"
+          className="font-bold capitalize text-xl w-full whitespace-nowrap flex gap-2 items-center "
+        >
           <img src={logoIcon} alt="logo" className="w-[40px] md:w-[50px]" />
-          <h1 className="text-sm lg:text-md dark:text-white">NobleDevWorks</h1>
+          <h1 className="text-sm lg:text-md dark:text-white">NobleDevWorks </h1>
         </Link>
         <ThemeToggle className="" />
       </div>
@@ -48,8 +50,8 @@ const Blog = () => {
             NobleDevWorks Blog
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Insights on web development, Graphic design, and tech education from my
-            journey
+            Insights on web development, Graphic design, and tech education from
+            my journey
           </p>
         </motion.div>
 
@@ -185,7 +187,7 @@ const Blog = () => {
           </div>
         </motion.div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

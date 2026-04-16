@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -39,6 +39,13 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <FaGithub />
+              </a>
+              <a
+                href="https://www.instagram.com/NobleDevWorks /"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
               </a>
             </div>
           </div>

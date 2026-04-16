@@ -17,6 +17,7 @@ import {
   building,
   debugging,
   darkMode,
+  outreachyFirefox,
 } from "../assets";
 
 const services = [
@@ -48,11 +49,11 @@ const works = [
       { name: "Firebase", color: "text-yellow-600" },
       { name: "MongoDB", color: "text-green-600" },
       { name: "TailwindCSS", color: "text-blue-600" },
-      { name: "Cloudinary", color: "text-purple-600" }
+      { name: "Cloudinary", color: "text-purple-600" },
     ],
     gitHub: "https://github.com/Noble14477/Lodgnet",
     webLink: "https://reserinn.vercel.app/",
-    status: "In-Progress"
+    status: "In-Progress",
   },
   {
     title: "Ai Summarizer",
@@ -63,19 +64,19 @@ const works = [
     gitHub: "https://github.com/Noble14477/Ai_Summarizer",
     tech: [
       {
-      name:"ReactJs",
-      color: "text-blue-800"
-    },
+        name: "ReactJs",
+        color: "text-blue-800",
+      },
       {
-      name:"Tailwind css",
-      color: "text-blue-500"
-    },
-      
+        name: "Tailwind css",
+        color: "text-blue-500",
+      },
+
       {
-      name:"Redux Tool Kit",
-      color: "text-pink-800"
-    },
-  ]
+        name: "Redux Tool Kit",
+        color: "text-pink-800",
+      },
+    ],
   },
   {
     title: "Safe Bay",
@@ -87,30 +88,30 @@ const works = [
     gitHub: "",
     tech: [
       {
-      name:"ReactJs",
-      color: "text-blue-800"
-    },
+        name: "ReactJs",
+        color: "text-blue-800",
+      },
       {
-      name:"Tailwind css",
-      color: "text-blue-500"
-    },
+        name: "Tailwind css",
+        color: "text-blue-500",
+      },
       {
-      name:"NodeJs",
-      color: "text-green-800"
-    },
+        name: "NodeJs",
+        color: "text-green-800",
+      },
       {
-      name:"Express",
-      color: "text-green-500"
-    },
+        name: "Express",
+        color: "text-green-500",
+      },
       {
-      name:"Mysql",
-      color: "text-blue-800"
-    },
+        name: "Mysql",
+        color: "text-blue-800",
+      },
       {
-      name:"Redux Tool Kit",
-      color: "text-pink-800"
-    },
-  ]
+        name: "Redux Tool Kit",
+        color: "text-pink-800",
+      },
+    ],
   },
   {
     title: "Invoice Generator App",
@@ -118,28 +119,27 @@ const works = [
     desc: "This web application allows users to create, manage, and view invoices with ease. It features secure authentication using Firebase, real-time data handling with Firestore, and a user-friendly interface built with React and Tailwind CSS. Users can log in, generate invoices, and track their billing history. A demo account is also provided for quick testing.",
     image: invoice,
     status: "Completed",
-    webLink: "https://newinvoiceapp.netlify.app/invoice", 
-    gitHub: "https://github.com/Noble14477/Invoice_app", 
+    webLink: "https://newinvoiceapp.netlify.app/invoice",
+    gitHub: "https://github.com/Noble14477/Invoice_app",
     tech: [
       {
         name: "ReactJs",
-        color: "text-blue-800"
+        color: "text-blue-800",
       },
       {
         name: "Tailwind CSS",
-        color: "text-blue-500"
+        color: "text-blue-500",
       },
       {
         name: "Firebase",
-        color: "text-yellow-500"
+        color: "text-yellow-500",
       },
       {
         name: "Firestore",
-        color: "text-orange-700"
-      }
+        color: "text-orange-700",
+      },
     ],
-  }
-  ,
+  },
   {
     title: "Social Media Automation",
     type: "web",
@@ -147,29 +147,29 @@ const works = [
     image: automation,
     status: "In Progress",
     webLink: "https://www.socialmediaautomation.uxlivinglab.online/",
-    gitHub: "https://github.com/LL03-Identity-Dowell/100007-Social-Media-Automation",
+    gitHub:
+      "https://github.com/LL03-Identity-Dowell/100007-Social-Media-Automation",
     tech: [
       {
-      name:"ReactJs",
-      color: "text-blue-800"
-    },
+        name: "ReactJs",
+        color: "text-blue-800",
+      },
       {
-      name:"Tailwind css",
-      color: "text-blue-500"
-    },
+        name: "Tailwind css",
+        color: "text-blue-500",
+      },
       {
-      name:"Python",
-      color: "text-green-800"
-    },
+        name: "Python",
+        color: "text-green-800",
+      },
       {
-      name:"Django",
-      color: "text-gray-800"
-    },
+        name: "Django",
+        color: "text-gray-800",
+      },
       {
-      name:"Redux Tool Kit",
-      color: "text-pink-800"
-    }, 
-      
+        name: "Redux Tool Kit",
+        color: "text-pink-800",
+      },
     ],
   },
   {
@@ -182,30 +182,29 @@ const works = [
     gitHub: "",
     tech: [
       {
-      name:"Next.Js",
-      color: "text-blue-800"
-    },
+        name: "Next.Js",
+        color: "text-blue-800",
+      },
       {
-      name:"ReactJs",
-      color: "text-blue-800"
-    },
+        name: "ReactJs",
+        color: "text-blue-800",
+      },
       {
-      name:"Tailwind css",
-      color: "text-blue-500"
-    },
+        name: "Tailwind css",
+        color: "text-blue-500",
+      },
       {
-      name:"NodeJs",
-      color: "text-green-800"
-    },
+        name: "NodeJs",
+        color: "text-green-800",
+      },
       {
-      name:"Coudinar (Cloud Storage)",
-      color: "text-blue-800"
-    },
+        name: "Coudinar (Cloud Storage)",
+        color: "text-blue-800",
+      },
       {
-      name:"Mongodb",
-      color: "text-pink-800"
-    },
-
+        name: "Mongodb",
+        color: "text-pink-800",
+      },
     ],
   },
   {
@@ -292,9 +291,106 @@ const skills = [
 
 const blogPosts = [
   {
+    id: 7,
+    title: "What the Firefox Outreachy Contribution Period Was Actually Like",
+    excerpt:
+      "A practical look at navigating the Firefox Outreachy contribution period, from competing for bugs to discovering them and contributing beyond the deadline.",
+    image: outreachyFirefox,
+    date: "April 15, 2026",
+    readTime: "5 min read",
+    categories: ["Open-source", "Outreachy"],
+    slug: "firefox-outreachy-contribution",
+    content: `
+
+## Starting out: it’s more competitive than you expect
+
+When the contribution period started, one thing became clear very quickly:
+Bugs don’t wait. You open Bugzilla, see something interesting, and before you fully understand it, someone else has already claimed it. That happened multiple times early on.
+
+At first, it felt like I needed to move faster, claim quickly, figure things out later. That approach doesn’t last.
+
+## The decision that changed things
+
+Instead of chasing bugs, I paused. I started reading through the sidebar and Firefox View code more carefully:
+- how components were structured  
+- how data flowed  
+- how similar problems were already being solved  
+
+That slowed me down at first, but it changed how I approached everything after that. Instead of trying to find bugs to work on, I started to notice problems while reading the code. That’s how I began filing bugs myself.
+
+## Moving from claiming bugs to finding them
+
+One of the most important shifts for me was this:
+
+- Before: waiting for bugs to appear  
+- After: identifying issues directly in the codebase  
+
+Examples included:
+- a mismatched closing tag in a synced tabs component  
+- inconsistent keyboard event handling using event.keyCode instead of event.code  
+
+These weren’t assigned. They were discovered. That changed both my confidence and how I navigated the codebase.
+
+## Not every bug gets finished
+
+One of the bugs I filed, a max-width issue, had to be abandoned. Not because I didn’t understand the problem, but because of limitations in how CSS behaves in that part of Firefox.
+That was an important lesson: Not every issue has a clean or immediate solution. Sometimes the correct decision is to step away instead of forcing a fix.
+
+## Working through uncertainty
+
+There were moments where I was stuck. Instead of staying blocked privately, I asked questions in the Matrix channel. That made a big difference. I also spent time helping other contributors when I could:
+- guiding people on how to add reviewers  
+- helping with setup issues  
+- encouraging better context when asking for help  
+
+That interaction helped me understand the workflow better.
+
+## What I worked on
+
+During the period, I contributed fixes in the sidebar and Firefox View areas, including:
+
+- correcting type mismatches in JSDoc  
+- adding missing UI data like timestamps for synced tabs  
+- fixing structural issues in components  
+- updating keyboard event handling logic  
+- writing browser tests for UI behavior  
+
+I also worked on a WebDriver-related issue that involved aligning Firefox behavior with web standards.
+
+## What this period actually teaches you
+
+It’s not just about writing code.
+It’s about:
+- knowing when to move fast and when to slow down  
+- understanding existing patterns before making changes  
+- asking the right questions  
+- accepting that some problems are deeper than they look  
+
+## Continuing beyond the contribution period
+
+Even after the contribution period ended, the work didn’t really stop for me.
+One of the WebDriver-related fixes I worked on led to further discussion, and I was assigned another bug in that area. I’m currently working on it.
+
+That experience made something clear to me: contributing here isn’t limited to the Outreachy timeline. Once you understand the codebase and the workflow, you can keep going.
+I plan to continue contributing to Firefox and building on what I’ve learned during this period.
+
+## Final thought
+
+The contribution period is short, but it’s intense.
+If you try to rush through it, you’ll struggle.
+If you take time to understand the codebase, even when it feels slow, things start to open up.
+That shift made the difference for me.
+
+## Acknowledgments
+
+Thanks to Kelly Cochrane and Nikki Sharpley for their guidance during the Outreachy contribution period, and to Alexandra Borovova for support on WebDriver contributions. I also appreciate the feedback from reviewers who helped improve my patches.
+`,
+  },
+  {
     id: 1,
     title: "Mastering React Hooks: A Comprehensive Guide",
-    excerpt: "Learn how to leverage React Hooks to simplify your components and manage state effectively.",
+    excerpt:
+      "Learn how to leverage React Hooks to simplify your components and manage state effectively.",
     image: hooks,
     date: "May 15, 2023",
     readTime: "8 min",
@@ -362,12 +458,13 @@ function useWindowWidth() {
 - Split effects into multiple \`useEffect\` calls by concern
 
 By mastering these hooks, you'll write cleaner, more maintainable React code.
-`
+`,
   },
   {
     id: 2,
     title: "The Psychology of Color in Web Design",
-    excerpt: "How color choices impact user experience and conversion rates in modern web applications.",
+    excerpt:
+      "How color choices impact user experience and conversion rates in modern web applications.",
     image: color,
     date: "April 28, 2023",
     readTime: "6 min",
@@ -407,12 +504,13 @@ Color is one of the most powerful tools in a designer's toolkit, influencing moo
 > "Colors, like features, follow the changes of the emotions." - Pablo Picasso
 
 Remember to test your color choices with real users to ensure they convey the right message.
-`
+`,
   },
   {
     id: 3,
     title: "Building Accessible Web Applications",
-    excerpt: "Practical techniques to ensure your web apps are usable by everyone, regardless of ability.",
+    excerpt:
+      "Practical techniques to ensure your web apps are usable by everyone, regardless of ability.",
     image: building,
     date: "April 10, 2023",
     readTime: "10 min",
@@ -462,12 +560,13 @@ When native HTML isn't enough:
 3. **Automated Tools**: axe DevTools or Lighthouse
 
 Accessibility should be considered from the start of every project, not bolted on at the end.
-`
+`,
   },
   {
     id: 4,
     title: "CSS Grid vs Flexbox: When to Use Each",
-    excerpt: "A detailed comparison of CSS layout systems with practical examples for different use cases.",
+    excerpt:
+      "A detailed comparison of CSS layout systems with practical examples for different use cases.",
     image: cssgridFlex,
     date: "March 22, 2023",
     readTime: "7 min",
@@ -528,12 +627,13 @@ Both CSS Grid and Flexbox are powerful layout tools, but they serve different pu
   flex-direction: column;
 }
 \`\`\`
-`
+`,
   },
   {
     id: 5,
     title: "Effective Debugging Techniques in JavaScript",
-    excerpt: "Professional debugging strategies that will save you hours of frustration in your JS projects.",
+    excerpt:
+      "Professional debugging strategies that will save you hours of frustration in your JS projects.",
     image: debugging,
     date: "March 5, 2023",
     readTime: "9 min",
@@ -581,12 +681,13 @@ console.trace('How did we get here?');
 - **Type Coercion**: Use \`===\` instead of \`==\`
 
 > "The most effective debugging tool is still careful thought, coupled with judiciously placed print statements." - Brian Kernighan
-`
+`,
   },
   {
     id: 6,
     title: "The Complete Guide to Dark Mode Implementation",
-    excerpt: "Step-by-step guide to implementing a perfect dark mode that respects user preferences.",
+    excerpt:
+      "Step-by-step guide to implementing a perfect dark mode that respects user preferences.",
     image: darkMode,
     date: "February 18, 2023",
     readTime: "12 min",
@@ -653,9 +754,8 @@ function toggleTheme() {
 - Test with various vision deficiencies
 
 Dark mode done right enhances user experience and reduces eye strain.
-`
-  }
+`,
+  },
 ];
 
-
-export { services, skills, works, blogPosts};
+export { services, skills, works, blogPosts };

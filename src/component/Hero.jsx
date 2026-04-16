@@ -2,17 +2,17 @@ import React from "react";
 import { background, resume } from "../assets";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ReactTyped } from "react-typed";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <ParallaxBanner
       layers={[
-        { 
-          image: background, 
+        {
+          image: background,
           speed: -18,
           // Add this className for dark mode styling
-          className: "dark:opacity-70 dark:brightness-50"
+          className: "dark:opacity-70 dark:brightness-50",
         },
         {
           speed: -25,
@@ -43,17 +43,42 @@ const Hero = () => {
                   >
                     Projects
                   </a>
-                  <a href={resume} download={"Noble's Resume"} className="border-2 px-6 py-2 border-gray-700 bg-white dark:bg-slate-900 dark:text-white md:py-4 uppercase text-black md:px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl">Download Cv</a>
+                  <a
+                    href={resume}
+                    download={"Noble's Resume"}
+                    className="border-2 px-6 py-2 border-gray-700 bg-white dark:bg-slate-900 dark:text-white md:py-4 uppercase text-black md:px-16 rounded-md hover:-translate-y-2 duration-300 shadow-xl"
+                  >
+                    Download Cv
+                  </a>
                 </div>
                 <div className="bg-white dark:bg-slate-900 dark:text-white rounded py-6 px-4 shadow-lg flex-col gap-8 hidden md:flex text-4xl absolute top-0 left-0">
-                  <a href="https://www.linkedin.com/in/noble-chinonso/" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.linkedin.com/in/noble-chinonso/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaLinkedin />
                   </a>
-                  <a href="https://twitter.com/Noble14188" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://twitter.com/Noble14188"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaTwitter />
                   </a>
-                  <a href="https://github.com/Noble14477" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://github.com/Noble14477"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaGithub />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/NobleDevWorks /"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram />
                   </a>
                 </div>
                 {/* <div className="absolute -left-6 top-0 w-10 md:w-32">
