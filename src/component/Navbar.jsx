@@ -20,7 +20,7 @@ const Navbar = () => {
 
         <div className="relative ">
           {!isMenuOpen ? (
-            <div className="flex gap-2 md:hidden justify-between items-center w-fit">
+            <div className="flex gap-2 lg:hidden justify-between items-center w-fit">
               <img
                 src={ham_menu}
                 alt="menu"
@@ -40,7 +40,7 @@ const Navbar = () => {
           )}
         </div>
         {isMenuOpen && (
-          <div className="flex divide-y-2 flex-col md:hidden bg-white dark:bg-slate-900 dark:text-white  float-right uppercase text-right w-full divide-gray-700 font-semibold shadow-lg rounded-md py-6 text-gray-600 text-[15px] -tracking-tighter border-t fixed left-0 top-16 ">
+          <div className="flex divide-y-2 flex-col lg:hidden bg-white dark:bg-slate-900 dark:text-white  float-right uppercase text-right w-full divide-gray-700 font-semibold shadow-lg rounded-md py-6 text-gray-600 text-[15px] -tracking-tighter border-t fixed left-0 top-16 ">
             <a
               href="/"
               className="pb-6 px-6 hover:text-orange-500 duration-150 ease-in-out"
@@ -79,7 +79,7 @@ const Navbar = () => {
             <Link to="/blog" className="py-6 px-6 hover:text-orange-500 duration-150 ease-in-out">Blog</Link>
           </div>
         )}
-        <div className="uppercase md:flex justify-end gap-12 text-right mr-12 w-full font-semibold dark:bg-slate-900 dark:text-white text-gray-600 text-[14px] -tracking-tighter px-6 hidden">
+        <div className="uppercase lg:flex justify-end gap-12 text-right mr-12 w-full font-semibold dark:bg-slate-900 dark:text-white text-gray-600 text-[14px] -tracking-tighter px-6 hidden">
           <a
             href="#"
             className="hover:text-orange-500 duration-150 ease-in-out"
@@ -112,7 +112,7 @@ const Navbar = () => {
           </a>
           <Link to="/blog" className=" hover:text-orange-500 duration-150 ease-in-out">Blog</Link>
         </div>
-        <div className="hidden md:flex ">
+        <div className="hidden lg:flex ">
 
         <ThemeToggle />
         </div>

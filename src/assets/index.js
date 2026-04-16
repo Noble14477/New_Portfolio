@@ -9,7 +9,7 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 import logoIcon from "./logoIcon.png";
 
-import me from "./me.jpg";
+import me from "./me.png";
 
 import ham_menu from "./png/ham-menu.svg";
 import ham_close from "./png/ham-menu-close.svg";
@@ -26,6 +26,7 @@ import NobleDevWorks2 from "./works/NobleDevWorks2.jpg";
 import invoice from "./works/invoice.png";
 
 import cssgridFlex from "./blog/css.jpg";
+import outreachyFirefox from "./blog/outreachy+firefox.jpg";
 import darkMode from "./blog/darkMode.jpg";
 import color from "./blog/color.png";
 import building from "./blog/building.webp";
@@ -38,6 +39,7 @@ import avatar from "./avatar.jpeg";
 import car from "./car.jpeg";
 
 export {
+  outreachyFirefox,
   darkMode,
   debugging,
   color,
